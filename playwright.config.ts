@@ -6,7 +6,7 @@ const config: PlaywrightTestConfig = {
     acceptDownloads: true,
     viewport: { width: 1920, height: 1080 },
     screenshot: "only-on-failure",
-    trace:"retain-on-failure"
+    trace: "retain-on-failure",
   },
   reporter: [["line"], ["experimental-allure-playwright"]],
   workers: 4,

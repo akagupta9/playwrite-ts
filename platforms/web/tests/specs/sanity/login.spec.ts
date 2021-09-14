@@ -11,9 +11,9 @@ test.describe("HOME : UI Verification", () => {
   });
 
   test("should verify presence of Home Tab", async ({ page }) => {
-    const isHomeTabPresent = await (await page
-      .locator("//span[text()='Home']"))
-      .isVisible({ timeout: 5000 });
+    const isHomeTabPresent = await (
+      await page.locator("//span[text()='Home']")
+    ).isVisible({ timeout: 5000 });
     await expect(isHomeTabPresent).toBeTruthy();
   });
 });
