@@ -7,6 +7,7 @@ test.describe("HOME : UI Verification", () => {
 
   test("should verify the Title", async ({ page }) => {
     const title = await page.title();
+    console.log(title);
     await expect(title).toContain("LinkedIn");
   });
 
