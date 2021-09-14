@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "ESNext"],
+    "target": "ESNext",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "allowJs": false,
+    "baseUrl": "./",
+    "outDir": "./out-dir",
+    "types": ["node"]
+  },
+  "compileOnSave": true
+}
