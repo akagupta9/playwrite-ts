@@ -5,31 +5,18 @@ const proxymise = require("proxymise");
 
 test.describe("HOME : UI Verification", () => {
   let page: Page;
+
   test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
     await page.goto("https://www.linkedin.com/");
   });
 
-  test("should verify the Title", async () => {
-    const title = await page.title();
-    await expect(title).toContain("LinkedIn");
-  });
-
-  test("should verify presence of Home Tab", async () => {
-    const isHomeTabPresent = await (
-      await page.locator("//span[text()='Home']")
-    ).isVisible({ timeout: 5000 });
-    await expect(isHomeTabPresent).toBeTruthy();
-  });
-
-  // Async Chaining
   test("should check the chaining of methods", async () => {
-    const title = await proxymise(HomePage)
-      .init(page)
-      .navigateTo("https://www.linkedin.com/")
-      .clickOnLoginButton()
-      .getTitle();
+    const title = await proxymise(HomePage).init(page).clickOnLoginButton().getTitle();
+    expect(title).toContain("Sign in | LinkedIn");
+  });
 
-    console.log(title);
+  test("should do login", async () => {
+    await proxymise(HomePage).init(page).doLogin("akanksha.mitrc@gmail.com", "Ak1997@g");
   });
 });

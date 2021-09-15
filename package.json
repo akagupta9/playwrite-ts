@@ -8,7 +8,7 @@
     "prepare-husky": "husky install",
     "lint-fix": "npx eslint . --ext .ts --fix",
     "test": "npx playwright test",
-    "posttest": "npm run allure:generate"
+    "posttesttt": "npm run allure-report"
   },
   "config": {},
   "author": "Akanksha Gupta",
