@@ -12,11 +12,16 @@ test.describe("HOME : UI Verification", () => {
   });
 
   test("should check the chaining of methods", async () => {
-    const title = await proxymise(HomePage).init(page).clickOnLoginButton().getTitle();
+    const title = await proxymise(HomePage)
+      .init(page)
+      .clickOnLoginButton()
+      .getTitle();
     expect(title).toContain("Sign in | LinkedIn");
   });
 
   test("should do login", async () => {
-    await proxymise(HomePage).init(page).doLogin("akanksha.mitrc@gmail.com", "Ak1997@g");
+    await proxymise(HomePage)
+      .init(page)
+      .doLogin("", "");
   });
 });
