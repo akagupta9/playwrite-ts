@@ -20,6 +20,6 @@ test.describe("HOME : UI Verification", () => {
   });
 
   test("should do login", async () => {
-    await proxymise(HomePage).init(page).doLogin("", "");
+    await proxymise(HomePage).init(page).doLogin("ab.c@gmail.com", "12345");
   });
 });
